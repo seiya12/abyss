@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*初期化*/
+*{
+	margin:0px;
+	padding:0px;
+}
+li{
+	list-style-type: none;
+	list-style-position: outside;
+}
+a{
+    text-decoration:none;
+}
+html{
+	scroll-behavior: smooth;
+}
+
+/*スタイリングコントロール*/
+body{
+    background-image: url(../images/bg-image41.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#header
+{
+    height: 100vh;
+    position:relative;
+}
+#logo1{
+    position: absolute;
+    bottom:-10px;
+    right:0px;
+    z-index:10;
+}
+#logo2{
+    position: absolute;
+    top:10px;
+    left:10px;
+    z-index:10;
+}
+#logo3{
+    position: absolute;
+    top:50px;
+    right:300px;
+    z-index:10;
+}
+#back{
+    position: fixed;
+    bottom:20px;
+    left:45px;
+    z-index:8;
+}
+
+#brandding{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    z-index:9;
+}
+#intro,
+#character,
+#cast,
+#gensaku{
+    text-align: center;
+    padding:50px;
+    position: relative;
+    box-sizing: border-box;
+    background-attachment: fixed;
+}
+#intro{
+	height:103vh;
+	position: relative;
+}
+#character{
+	height:160vh;
+}
+#cast{
+	height:140vh;
+}
+#gensaku{
+	height:1130px;
+}
+#introIn,
+#charIn,
+#castIn,
+#gensakuIn{
+    box-sizing: border-box;
+    width:900px;
+    padding:30px 0px;
+    text-align: center;
+    background: rgba(255,255,255,0.65);/*背景色（透過）*/
+    border-radius: 50px;
+    position:absolute;
+    left:50%;
+    margin-left:-32%;
+}
+#introIn{
+	top:43%;
+	margin-top:-150px;
+}
+#charIn{
+	top:20%;
+	margin-top:-150px;
+	padding-bottom:50px;
+}
+#castIn{
+	top:26%;
+	margin-top:-150px;
+}
+#gensakuIn{
+	top:80px;
+	z-index: 3;
+}
+h2{
+    margin-bottom: 10px;
+}
+#marginb{
+    background-image: url(../images/bg-image4.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#gensakub{
+    background-image: url(../images/bg-image42.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#margin{
+    background-image: url(../images/bg4.png);
+    background-repeat: repeat;
+    background-position: center center;
+    height:50vh;
+    background-attachment: fixed;
+}
+#intro{
+    background-image: url(../images/bgi2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#character{
+    background-image: url(../images/bg7.png);
+    background-repeat: repeat;
+    background-position: center center;
+}
+#cast{
+    background-image: url(../images/bgi3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#gensaku{
+    background-image: url(../images/bg6.png);
+    background-repeat: repeat;
+    background-position: center center;
+}
+p{
+	margin-bottom:5px;
+	color:#776256;
+}
+h3{
+	color:#68564b;
+}
+#intro p:nth-of-type(5){
+	margin-bottom:15px;
+}
+#cast p:nth-of-type(1){
+	margin-bottom:15px;
+}
+#cast p:nth-of-type(8){
+	margin-bottom:15px;
+}
+#cast p:nth-of-type(11){
+	margin-bottom:15px;
+}
+#cast p:nth-of-type(17){
+	margin-bottom:15px;
+}
+span{
+	font-weight: bold;
+}
+
+
+.char,.comic{
+    opacity: 0.6;
+}
+.comic:hover,.char:hover{
+    opacity: 0.8;
+}
+#riko:checked ~ .char[for="riko"],
+#regu:checked ~ .char[for="regu"],
+#nanachi:checked ~ .char[for="nanachi"],
+#orzen:checked ~ .char[for="orzen"],
+#maruruku:checked ~ .char[for="maruruku"],
+#raiza:checked ~ .char[for="raiza"],
+#com1:checked ~ .comic[for="com1"],
+#com2:checked ~ .comic[for="com2"],
+#com3:checked ~ .comic[for="com3"],
+#com4:checked ~ .comic[for="com4"],
+#com5:checked ~ .comic[for="com5"],
+#com6:checked ~ .comic[for="com6"],
+#com7:checked ~ .comic[for="com7"]{
+	opacity: 1;
+}
+/*ラジオボタンを全て消す*/
+input{
+    display: none;
+}
+/*タブ切り替えの中身のスタイル*/
+.char_open, .comic_open {
+    display: none;
+    clear: both;
+    overflow: hidden;
+}
+/*選択されているタブのコンテンツのみを表示*/
+#riko:checked ~ #riko_open,
+#regu:checked ~ #regu_open,
+#nanachi:checked ~ #nanachi_open,
+#orzen:checked ~ #orzen_open,
+#maruruku:checked ~ #maruruku_open,
+#raiza:checked ~ #raiza_open,
+#com1:checked ~ #com1_open,
+#com2:checked ~ #com2_open,
+#com3:checked ~ #com3_open,
+#com4:checked ~ #com4_open,
+#com5:checked ~ #com5_open,
+#com6:checked ~ #com6_open,
+#com7:checked ~ #com7_open{
+    display: block;
+}
+#comic_menu{
+	margin-bottom:30px;
+}
+#gensaku h3+p{
+	text-align: left;
+	display: inline-block;
+}
+.left{
+	float:left;
+	width: 350px;
+	box-sizing: border-box;
+	margin-top:30px;
+	margin-bottom:100px;
+}
+.right{
+	float:left;
+	width:550px;
+	box-sizing: border-box;
+	margin-top:30px;
+	text-align: left;
+	padding-right:25px;
+}
+.right p{
+	font-size:0.95em;
+	text-align: justify;
+	text-justify: inter-ideograph;
+	margin-bottom:25px;
+}
+.right p:nth-of-type(1){
+	font-size:0.85em;
+	border-bottom:solid 1px #776256;
+	margin-bottom:30px;
+}
+#under{
+	position: absolute;
+	z-index: 5;
+	bottom:0px;
+	right:0px;
+}
+img{
+	vertical-align: middle;
+}
+#gensaku h3{
+	margin-top:30px;
+	font-family: 'Kosugi Maru', sans-serif;
+	font-size:1.4em;
+}
+body::-webkit-scrollbar{
+	display: none;
+}
+
+
+
+
+
+
